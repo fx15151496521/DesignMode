@@ -14,6 +14,9 @@ public abstract class Duck {
 
     public Duck() {}
 
+    /**
+     * 鸭子外观
+     */
     public abstract void display();
 
     /**
