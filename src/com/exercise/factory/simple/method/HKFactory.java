@@ -1,8 +1,13 @@
-package com.exercise.factory.simple;
+package com.exercise.factory.simple.method;
+
+import com.exercise.factory.simple.model.HKBaconPizza;
+import com.exercise.factory.simple.model.HKCheesePizza;
+import com.exercise.factory.simple.model.Pizza;
 
 /**
- * @Description:
+ * @Description: HK factory
  * @Date: 2020/1/9 17:59
+ * @author xfei
  */
 public class HKFactory extends OrderPizza {
 
@@ -11,11 +16,11 @@ public class HKFactory extends OrderPizza {
         Pizza pizza = null;
         switch (orderType) {
             case "cheese":
-                pizza = new CheesePizza();
+                pizza = new HKCheesePizza();
                 pizza.setName("HK " + orderType + " pizza");
                 break;
             case "bacon":
-                pizza = new BaconPizza();
+                pizza = new HKBaconPizza();
                 pizza.setName("HK " + orderType + " pizza");
                 break;
             default:

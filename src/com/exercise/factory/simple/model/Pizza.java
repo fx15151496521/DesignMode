@@ -1,4 +1,4 @@
-package com.exercise.factory.simple;
+package com.exercise.factory.simple.model;
 
 /**
  * @Description:

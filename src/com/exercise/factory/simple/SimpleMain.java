@@ -1,6 +1,7 @@
 package com.exercise.factory.simple;
 
-import java.util.Scanner;
+import com.exercise.factory.simple.method.HKFactory;
+import com.exercise.factory.simple.method.OrderPizza;
 
 /**
  * @Description:

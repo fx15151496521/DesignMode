@@ -1,4 +1,6 @@
-package com.exercise.factory.simple;
+package com.exercise.factory.simple.method;
+
+import com.exercise.factory.simple.model.Pizza;
 
 import java.util.Scanner;
 
@@ -30,6 +32,11 @@ public abstract class OrderPizza {
         }
     }
 
+    /**
+     * create make pizza method
+     * @param orderType
+     * @return
+     */
     public abstract Pizza createPizza(String orderType);
 
     public String getOrderType() {

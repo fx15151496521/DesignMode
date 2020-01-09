@@ -1,8 +1,13 @@
-package com.exercise.factory.simple;
+package com.exercise.factory.simple.method;
+
+import com.exercise.factory.simple.model.LDBaconPizza;
+import com.exercise.factory.simple.model.LDCheesePizza;
+import com.exercise.factory.simple.model.Pizza;
 
 /**
- * @Description:
+ * @Description: LD factory
  * @Date: 2020/1/9 17:58
+ * @author xfei
  */
 public class LDFactory extends OrderPizza {
 
@@ -11,11 +16,11 @@ public class LDFactory extends OrderPizza {
         Pizza pizza = null;
         switch (orderType) {
             case "cheese":
-                pizza = new CheesePizza();
+                pizza = new LDCheesePizza();
                 pizza.setName("LD " + orderType + " pizza");
                 break;
             case "bacon":
-                pizza = new BaconPizza();
+                pizza = new LDBaconPizza();
                 pizza.setName("LD " + orderType + " pizza");
                 break;
             default:
