@@ -7,15 +7,19 @@ package com.exercise.singleton.lazy;
  */
 public class SingletonLazy {
 
-    private static SingletonLazy instance = null;
+    // 双层锁结构
+    private volatile static SingletonLazy instance = null;
 
     private SingletonLazy() {}
 
     public static SingletonLazy getInstance() {
-        // 解决懒汉模式非线程安全的问题
-        synchronized(Object.class) {
-            if (instance == null) {
-                instance = new SingletonLazy();
+        // 双层检查加锁
+        if (instance == null) {
+            // 解决懒汉模式非线程安全的问题
+            synchronized (Object.class) {
+                if (instance == null) {
+                    instance = new SingletonLazy();
+                }
             }
         }
         return instance;
